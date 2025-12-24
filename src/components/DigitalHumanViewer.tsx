@@ -201,7 +201,7 @@ function Scene({ autoRotate, modelScene }: { autoRotate?: boolean; modelScene?: 
       <pointLight position={[-10, -10, -10]} intensity={1} color="#3b82f6" />
       
       {/* Environment Reflections */}
-      <Environment preset="city" />
+      <Environment files="/potsdamer_platz_1k.hdr" />
       
       {/* The Avatar */}
       {modelScene ? (
