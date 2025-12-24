@@ -6,33 +6,21 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss:; media-src 'self' blob:;"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: raw.githack.com; font-src 'self' data:; connect-src 'self' ws: wss: raw.githack.com; media-src 'self' blob:;"
         }
       ]
     },
-     {
+    {
       "source": "/(.*\\.hdr)",
       "headers": [
         { "key": "Content-Type", "value": "image/vnd.radiance" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" } // 可选：解决跨域加载问题
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
   ],
